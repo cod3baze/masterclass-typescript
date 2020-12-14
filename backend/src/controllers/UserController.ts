@@ -16,12 +16,14 @@ export default {
 
     EmailService.sendMail(
       {
-        name: 'eliasallex',
-        email: 'eliasallex@gmail.com'
-      },
-      {
-        body: 'Seja bem-vindo',
-        subject: 'Bem-vindo ao sistema'
+        to: {
+          name: 'eliasallex',
+          email: 'eliasallex@gmail.com'
+        },
+        message: {
+          body: 'Seja bem-vindo',
+          subject: 'Bem-vindo ao sistema'
+        }
       })
 
     return response.json('Email enviado')
