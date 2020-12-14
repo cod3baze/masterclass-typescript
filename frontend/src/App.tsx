@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import User from './components/User';
 import api from './services/api';
 
 interface IUser {
@@ -18,10 +19,7 @@ const App: React.FC = () => {
   return (
     <div>
       {users.map(user => (
-        <>
-          <strong>{user.name}</strong>
-          <p>{user.email}</p>
-        </>
+        <User key={user.email} name={user.name} email={user.email} />
       ))}
     </div>
   );
